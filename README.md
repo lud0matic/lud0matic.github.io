@@ -1,0 +1,1 @@
+This blog using Memoirs Jekyll Theme. See [https://wowthemesnet.github.io/jekyll-theme-memoirs/](https://wowthemesnet.github.io/jekyll-theme-memoirs/) for details of the original version of this theme.

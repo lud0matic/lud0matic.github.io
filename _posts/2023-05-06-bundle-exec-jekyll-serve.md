@@ -1,12 +1,9 @@
 ---
 layout: post
-author: Gaston
 title:  "Bundle Exec Jekyll Serve"
 date:   2023-05-06 01:21:53 -0300
 categories: [Dev]
 comments: false
-image: https://gastonabril.com.ar/wp-content/uploads/2022/12/DSC_1398.jpg
-author: Gaston
 ---
 
 Que lindo ese momento cuando ya no tenés que googlear o buscar dentro de 200 pestañas abiertas de Stack Overflow como es que se escribe ese comando del terror que deseas memorizar y no sale. Creo que hoy debo haber ejecutado unas 1000 veces la sentencia

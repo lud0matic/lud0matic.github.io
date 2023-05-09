@@ -5,9 +5,9 @@ description: "Bitácora de un fotógrafo atormentado."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ""
-#google_analytics: 'UA-xxxxxxxx-1'
+google_analytics: 'G-NVPD0CPCVS'
 disqus: 'ludomatic'
-#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+#mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
 email: hello@gastonabril.com.ar
@@ -18,10 +18,9 @@ authors:
     name: Gastón
     display_name: Gastón
     avatar: 'assets/images/me.png'
-    email: hello@gastonabril.com.ar
     web: https://www.gastonabril.com.ar
     twitter: https://twitter.com/ludomatic
-    mastodon: https://mastodon.social/@ludomatic
+    mastodon: https://mastodon.social/@ludomatic  
     description: "Fotógrafo por vocación, nerdo porque se me da fácil."
 
 
@@ -61,7 +60,7 @@ adsense-data-ad-client: "ca-pub-3412143450191416"
 adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+lazyimages: "enabled"
 
 # Post Author Box ("enabled" or "disabled")
 authorbox: "enabled"

@@ -2,6 +2,7 @@
 layout: post
 title:  "Bundle Exec Jekyll Serve"
 date:   2023-05-06 01:21:53 -0300
+permalink: /Bundle-Exec-Jekyll-Serve
 categories: [Dev]
 comments: false
 ---

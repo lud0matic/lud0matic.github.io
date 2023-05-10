@@ -392,9 +392,19 @@ img, img:hover {
     }
 }
 
+// Mastodon
+
+.mastodon {
+    --mastodon-btn-bg: none;
+    --mastodon-btn-border: #ffffff;    
+    --mastodon-btn-rad: 0%;
+    --mastodon-btn-txt: #111111;    
+  }
+
 // blog 
+
 .article-post, .entry-header, .comments, .rating, .authorbox {
-    max-width: 740px;
+    max-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
@@ -406,7 +416,7 @@ img, img:hover {
     line-height:1.2;
 }
 .entry-featured-image {  
-    width:940px;  
+    width:1280px;  
     max-width: 100%;
     text-align:center;
     margin-left:auto;

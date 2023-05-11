@@ -20,15 +20,22 @@
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </li>
+        
+        <!-- check amount of tags -->
+        {% if page.tags.size == 0 %}
+        {% assign mastodon_tags = "" %}
+        {% else %}
+        {% assign mastodon_tags = {{page.tags | sort |join:' ,#' | prepend:'#' | split:','}} %}
+        {% endif %}
+        <!-- end check -->
 
         <li class="ml-1 mr-1">
             <share-on-mastodon class = "mastodon"
-                            share_title = "{{ page.title }}"
-                            hashtags = "#{{ page.tags | sort | join:" ,#" | split:"," }}"
-                            button_text = " "        
+                            share_title = "{{ tags_array.title }}"                            
+                            hashtags = "{{ mastodon_tags }}"
+                            button_text = ' '
             ></share-on-mastodon>
         </li>
-        
     </ul>
     <script defer type="module" src="https://cdn.jsdelivr.net/npm/@micahilbery/share-on-mastodon@1.0.5/share-on-mastodon.js"></script>
 </div>

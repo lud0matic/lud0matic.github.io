@@ -16,10 +16,43 @@ $enable-rounded: false;
 @import 'stars';
 
 // Custom
+
+// Mastodon
+.mastodon {
+    --mastodon-btn-bg: none;
+    --mastodon-btn-border: #ffffff;    
+    --mastodon-btn-rad: 0%;
+    --mastodon-btn-txt: ##2E3047;    
+  }
+
+//logo position
 .site-content .container .navbar-brand {
     position: relative;
     right: 110px;
 }
+
+@media (min-width: 768px) {
+    .site-content .container .navbar-brand {
+        max-width: 80%;
+    }
+}
+@media (min-width: 1440px) {
+    .site-content .container .navbar-brand {
+        max-width: 1140px;
+    }
+}
+@media (max-width: 1024px) {
+    .site-content .container .navbar-brand {
+        width: 90%;
+        max-width:90%;
+        padding-left:80px;
+    }
+}
+
+
+
+
+
 
 // general
 body, input, button, select, optgroup, textarea {   
@@ -395,19 +428,8 @@ img, img:hover {
     form {
         margin-top:30px;
     }
-}
-
-// Mastodon
-
-.mastodon {
-    --mastodon-btn-bg: none;
-    --mastodon-btn-border: #ffffff;    
-    --mastodon-btn-rad: 0%;
-    --mastodon-btn-txt: ##2E3047;    
-  }
-
+} 
 // blog 
-
 .article-post, .entry-header, .comments, .rating, .authorbox {
     max-width: 1000px;
     padding-left: 20px;

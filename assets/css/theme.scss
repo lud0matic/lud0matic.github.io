@@ -48,11 +48,17 @@ $enable-rounded: false;
         padding-left:80px;
     }
 }
+//image shadow
+img[src*="#shadow"] { 
+    filter: drop-shadow(0 25px 45px rgba(#000, .40)) drop-shadow(0 0 2px rgba(#000, .50));  
+    display: block;
+    margin: 1em auto 70px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-
-
-
-
+// End custom
 
 // general
 body, input, button, select, optgroup, textarea {   

@@ -20,7 +20,7 @@ This blog is using [Memoirs Jekyll Theme](https://wowthemes.net/memoirs-free-jek
 
 ## Configurations
 
-Type theme comes with different customizations in the `_config.yml` file. I added it a few more.
+Jekyll theme comes with different customizations in the `_config.yml` file. I added a few more.
 
 ```sh
 # Site

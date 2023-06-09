@@ -138,14 +138,15 @@
             <div class="col-md-4 col-sm-12 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
             </div>
-
-            <div class="col-md-4 col-sm-12 text-center ">
-                <a target="_blank" style="color: #2D3047" href="https://gastonabril.com.ar"<i class="fas fa-link"></i></a> &nbsp; 
-                <a target="_blank" style="color: #2D3047" href="https://mastodon.social/@ludomatic"<i class="fab fa-mastodon"></i></a> &nbsp;
-                <a target="_blank" style="color: #2D3047" href="https://instagram.com/ludomatic"<i class="fab fa-instagram"></i></a> &nbsp;
-                <a target="_blank" style="color: #2D3047" href="https://twitter.com/ludomatic"<i class="fab fa-twitter"></i><a>
+            
+            <div class="col-md-4 col-sm-12 text-center ">                
+                {% if site.socials.personal_web %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.personal_web }}"<i class="fas fa-link"></i></a> &nbsp;{% endif %}
+                {% if site.socials.mastodon %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.mastodon }}"<i class="fab fa-mastodon"></i></a> &nbsp;{% endif %}
+                {% if site.socials.instagram %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.instagram }}"<i class="fab fa-instagram"></i></a> &nbsp;{% endif %}
+                {% if site.socials.twitter %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.twitter }}"<i class="fab fa-twitter"></i></a> &nbsp;{% endif %}
+                {% if site.socials.github %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.github }}"<i class="fa-brands fa-github-alt"></i></a> &nbsp;{% endif %}
             </div>
-
+            
             <div class="col-md-4 col-sm-12 text-center text-lg-right">    
                 <a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Theme</a> by WowThemes.net
             </div>
@@ -166,10 +167,6 @@
 
 {% if site.lazyimages == "enabled" %}
 <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
-{% endif %}
-
-{% if page.layout == 'post' %}
-<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
 
 </body>

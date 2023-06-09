@@ -7,23 +7,22 @@ logo_hover: 'assets/images/logo_hover.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ""
 google_analytics: 'G-NVPD0CPCVS'
-disqus: 'ludomatic'
-#mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
 email: hello@gastonabril.com.ar
 
-# Authors
-authors:
-  Gaston:
-    name: Gastón
-    display_name: Gastón
-    avatar: 'assets/images/me.png'
-    web: https://www.gastonabril.com.ar
-    twitter: https://twitter.com/ludomatic
-    mastodon: https://mastodon.social/@ludomatic  
-    description: "Fotógrafo por vocación, nerdo porque se me da fácil."
+# Gitcus - Check https://giscus.app to get your Repo-IDs 
+# Copy the "Enable giscus" section from giscus.app into gitcus.html file
+# "enabled" or "disabled"
+gitcus: "enabled"
 
+#Footer
+socials:
+  personal_web: https://gastonabril.com.ar
+  mastodon: https://mastodon.social/@ludomatic
+  twitter: https://twitter.com/ludomatic
+  instagram: https://instagram.com/ludomatic
+  github: https://github.com/lud0matic
 
 # Plugins
 plugins:

@@ -2,12 +2,49 @@
 
 ---
 
+html, html[data-theme="light"] {
+	--background-color: #f4f4f4;
+    --background-bar-footer: #FFFFFF;
+    --text-color: #212429;
+    --text-color-invert: #ffffff;
+    --link-color: #68a3e3;
+}
+
+html[data-theme="dark"] {
+	--background-color: #23272D;
+    --background-bar-footer: #17191d;
+    --text-color: #ffffff;  
+    --text-color-invert: #212429;
+    --link-color: #9cccff;
+    
+}
+
+
+@media (prefers-color-scheme: dark) {
+    html, html[data-theme="dark"] {
+        --background-color: #23272D;
+        --background-bar-footer: #17191d;
+        --text-color: #ffffff;
+        --text-color-invert: #212429;
+        --link-color: #9cccff;
+    }
+
+    html[data-theme="light"] {
+        --background-color: #f4f4f4;
+        --background-bar-footer: #FFFFFF;
+        --text-color: #212429;
+        --text-color-invert: #ffffff;
+        --link-color: #68a3e3;
+  } 
+}
+
+
 $brown: #B59F62;
 $teal: #a7cef8;
 $black: #2D3047;
 $primary: $teal;
 $dark:    $black;
-$enable-rounded: false;
+$enable-rounded: True;
 
 @import "bootstrap/functions";
 @import 'bootstrap/variables';
@@ -17,12 +54,27 @@ $enable-rounded: false;
 
 // Custom
 
+//dark theme
+.dark-mode-button {
+    position: relative;
+    display: flex;
+    justify-content: end;    
+}
+
+//custon footer
+.footer-color {
+    a {
+        color: var(--text-color);
+    }
+    
+}
+
 // Mastodon
 .mastodon {
     --mastodon-btn-bg: none;
     --mastodon-btn-border: #ffffff;    
     --mastodon-btn-rad: 0%;
-    --mastodon-btn-txt: ##2E3047;    
+    --mastodon-btn-txt: var(--text-color)
   }
 
 //logo position
@@ -61,15 +113,16 @@ img[src*="#shadow"] {
 // End custom
 
 // general
-body, input, button, select, optgroup, textarea {   
+body, input, button, select, optgroup, textarea {
+    color: var(--text-color);      
     font-family:Sen;
 }
 body {
     line-height:1.7;
-    background: #f4f4f4;
+    background: var(--background-color);
 }
 a {
-    color: darken($primary, 24%);
+    color: var(--link-color);
 }
 img {
     max-width:100%;
@@ -77,12 +130,15 @@ img {
 }
 
 h1,h2,h3,h4,h5,h6 {
+    color:var(--text-color);
     font-weight:700;
 }
 .site-content {
+    color: var(--text-color);
     padding-top:50px;
 }
 .sitetag {
+    color: var(--text-color);
     font-weight:700;    
     line-height:1.3;
     font-size:35px;
@@ -105,7 +161,7 @@ blockquote {
     font-style: italic;
     font-size: 20px;
     position:relative;
-    border-left:1px solid $dark;
+    border-left:1px solid var(--text-color);
     margin-left:30px;
     padding-left:15px;
     cite {
@@ -160,7 +216,7 @@ img, img:hover {
 .navbar-brand img {
     max-height:80px;
     margin-bottom:40px;
-    margin-top:40px;
+    margin-top:40px;    
 }
 .sidebar {
     position: fixed;
@@ -170,7 +226,7 @@ img, img:hover {
     height: 100%;
     border-right: solid rgba(0, 0, 0, 0.07) 1px;
     z-index: 1022;
-    background:#fff;
+    background: var(--background-bar-footer);
 }
 .nav-icon {
     position: fixed;
@@ -194,7 +250,7 @@ img, img:hover {
             position: absolute;
             width: 18px;
             height: 2px;
-            background: #292C30;
+            background: var(--text-color);
             border-radius: 1px;
         }
         &:before {
@@ -222,7 +278,7 @@ img, img:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(8, 11, 16, 0);
+    background:var(--background-color);    
     z-index: -1;
     animation: animate2 .3s;
     &.active {
@@ -232,12 +288,12 @@ img, img:hover {
     }
 }
 #menu {
-    position: fixed;
+    position: fixed;    
     top: 0;
     left: 0;
     height: 100%;
     width: 420px;
-    background: #fff;
+    background: var(--background-bar-footer);
     padding: 0;
     margin: 0;
     transform: translate(-100%, 0);
@@ -261,7 +317,7 @@ img, img:hover {
                 padding: 2vh 0px 2vh 0px;
                 line-height: 20px;
                 text-decoration: none;
-                color: #8E9AA7;
+                color: var(--text-color);
                 font-weight: 400;
                 font-size: 18px;
                 position: relative;
@@ -272,7 +328,7 @@ img, img:hover {
 
 
 // blog grid
-.blog-grid-container {
+.blog-grid-container {        
     width: auto;
     margin: 50px auto;
     display: grid;
@@ -281,7 +337,6 @@ img, img:hover {
     grid-gap: 30px;
 }
 .blog-grid-item {  
-    color: #333;
     padding: 0;
     display: flex;
     align-items:center;
@@ -290,23 +345,26 @@ img, img:hover {
         border-radius:50%;
         margin-right: 7px;
     }
-    .card {
-        border:0;
+    .card {        
+        border: 0;
+        background-color: var(--background-bar-footer);        
         &:hover {           
            .card-title a { 
+                color: var(--text-color);
                 background-size: 100% 100%;
             }
         }
     }
-    .card-title {
+    .card-title {                
         font-weight:700;
         font-size:22px;
         line-height:1.4;
         a { 
+            color: var(--text-color);            
             background-image: linear-gradient(180deg, transparent 89%, $primary 0);
             background-repeat: no-repeat;
             background-size: 0 100%;
-            transition: background-size .6s ease;
+            transition: background-size .6s ease;            
             position:relative;
             &:hover {
                 text-decoration:none;
@@ -314,13 +372,16 @@ img, img:hover {
         }
     }
     .card-text {
+        color:var(--text-color);
         font-weight:400;
         font-size:16px;
         line-height:1.8;
         margin-top:15px;
     }
-    .card-footer {
-       font-size:14px;
+    .card-footer {   
+        background-color: var(--background-bar-footer);     
+        color:var(--text-color);
+        font-size:14px;
         border-top:0;
         padding: 1rem 1.25rem;
         a {
@@ -331,6 +392,7 @@ img, img:hover {
     .post-date {
         float:right;
         margin-top: 10px;
+        color: var(--text-color);
     }
     .img-thumb {
         object-fit:cover;
@@ -350,7 +412,7 @@ img, img:hover {
         font-size: 1em;
         padding:0;
         .card-title {
-            font-size:28px;
+            font-size:28px;            
         }
         .img-thumb {
             object-fit:cover;
@@ -381,11 +443,11 @@ img, img:hover {
 .pagination {
     justify-content:center;
     a {
-        background: rgba(0,0,0,0.05);
-        color:#000;
+        background: var(--background-bar-footer);
+        color:var(--text-color);
         cursor:pointer;
         &:hover {
-            background: $primary;
+            background: var(--link-color);
             text-decoration:none;
         }
     }
@@ -442,11 +504,13 @@ img, img:hover {
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--text-color);
 }
 .posttitle {
     font-size:50px;
     font-weight:700;
     line-height:1.2;
+    color: var(--text-color);    
 }
 .entry-featured-image {  
     width:1280px;  
@@ -492,12 +556,12 @@ img, img:hover {
     }
     code {
         font-size: 15px;
-        color: #94918d;
+        color: var(--background-color);
     }
     code[class*="language-"], pre[class*="language-"] {
         font-size:15px;
         margin-bottom:30px;
-        background: #fff;
+        background: var(--background-bar-footer);
         color:inherit;
     }
     div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span {
@@ -513,7 +577,7 @@ img, img:hover {
 
 .spoiler {
     color: transparent;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);    
     transition: all .4s;
     cursor: pointer;
     position: relative;
@@ -524,8 +588,8 @@ img, img:hover {
         top: 45%;
         left: calc(50% - 75px);
         text-shadow: none;
-        background: #222;
-        color: #fff;
+        background: var(--text-color);
+        color: var(--text-color-invert);
         display: inline-block;
         font-size: 13px;
         line-height: 1;
@@ -544,8 +608,9 @@ img, img:hover {
 .comments {
     margin-top:30px;
     margin-bottom:60px;
+    background-color: var(--background-color);
     #comments {
-        display:none;
+        display:none;        
         margin-top:60px;
         &.comments--show {
             display:block;
@@ -574,7 +639,7 @@ img, img:hover {
         li {
             margin:15px 0;
             a {
-                color:$dark;
+                color:var(--text-color);
             }
         }
     }
@@ -584,42 +649,64 @@ img, img:hover {
 .show-search {
     cursor:pointer;
     &:hover {
-        color: darken($primary,20%);
+        color: var(--link-color);
     }
 }
 .bd-search {
     visibility: hidden;
     opacity: 0;
-    transition:opacity 0.5s linear;
+    transition:opacity 0.5s linear;    
     &.search--show {
         visibility: visible;
         opacity: 1;
-        transition:opacity 0.5s linear;
+        transition:opacity 0.5s linear;        
     }
 }
 .wrap-search {
     position: fixed;
     left: 30px;
     bottom: 25px;
-    z-index: 1026;
+    z-index: 1026;    
 }
 .modal-open .modal {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.3);    
 }
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+    // counteract the pointer-events: none; in the .modal-dialog
+    color: $modal-content-color;
+    pointer-events: auto;
+    // background-color: $modal-content-bg;
+    background-color: var(--background-bar-footer);
+    background-clip: padding-box;
+    border: $modal-content-border-width solid $modal-content-border-color;
+    @include border-radius($modal-content-border-radius);
+    @include box-shadow($modal-content-box-shadow-xs);
+    // Remove focus outline from opened modal
+    outline: 0;
+  }
+
+
+
 .lunrsearchresult {
     .title {
-        color:#000;
+        color:var(--text-color);
+        
         font-weight:700;
         line-height:1.2;
         display:block;
         font-size:20px;
-        margin-bottom:5px;
+        margin-bottom:5px;        
         &:hover {
-            color: darken($primary,20%);
+            color: var(--link-color);
         }
     }
     span.body {
-        color: $gray-500;
+        color:var(--text-color);
         line-height:1.7;
         display:block;
         margin-bottom:10px;
@@ -634,19 +721,20 @@ img, img:hover {
     }
 }
 body.active-side {
-    .bd-search {
+    .bd-search {        
         visibility: visible;
         opacity: 1;
-        transition: opacity 0.5s linear;
+        transition: opacity 0.5s linear;        
     }
 }
 //footer
 .footer {
+    color: var(--text-color);
     margin-top:120px;
     padding:30px;
-    border-top:1px solid $gray-200;
+    border-top:1px solid var(--background-bar-footer);
     font-size:15px;
-    background:#fff;
+    background:var(--background-bar-footer);
 }
 
 //responsive tweaks

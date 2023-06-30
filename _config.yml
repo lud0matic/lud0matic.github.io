@@ -2,8 +2,8 @@
 name: "Gastón Abril Rotger"
 title: "Bitácora de un fotógrafo atormentado"
 description: "Bitácora de un fotógrafo atormentado."
-logo: 'assets/images/logo.png'
-logo_hover: 'assets/images/logo_hover.png'
+logo: 'assets/images/logo.svg'
+logo_hover: 'assets/images/logo_hover.svg'
 favicon: 'assets/images/favicon.ico'
 baseurl: ""
 google_analytics: 'G-NVPD0CPCVS'

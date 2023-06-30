@@ -15,8 +15,7 @@ html[data-theme="dark"] {
     --background-bar-footer: #17191d;
     --text-color: #ffffff;  
     --text-color-invert: #212429;
-    --link-color: #9cccff;
-    
+    --link-color: #9cccff;    
 }
 
 
@@ -54,12 +53,63 @@ $enable-rounded: True;
 
 // Custom
 
-//dark theme
+//Dark Theme & Logo
+
+//sun-moon button
 .dark-mode-button {
     position: relative;
     display: flex;
     justify-content: end;    
 }
+
+//Logo using SVG
+.container-dark {
+    position: relative;       
+    width: 283px;
+}
+
+.logo {
+    fill: var(--text-color);
+}
+
+.logo_hover {    
+    display: inline-block;
+    fill: var(--background-color);
+    &:hover {        
+        background-color: var(--background-color);
+        fill: var(--text-color);
+    }
+}
+// Logo using SVG
+
+
+
+// Logo using SVG file from _config.yml
+
+// .container-dark {
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     width: 283px;
+//     height: auto;
+        
+// }
+
+// #logo_hover {    
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     opacity: 0;    
+   
+//     &:hover{         
+//         opacity: 1;
+//         fill: var(--text-color); 
+//     }
+// }
+
+// Logo using SVG File from _config.yml
+
+
 
 //custon footer
 .footer-color {
@@ -78,7 +128,7 @@ $enable-rounded: True;
   }
 
 //logo position
-.site-content .container .navbar-brand {
+.site-content .container .navbar-brand {    
     position: relative;
     right: 110px;
 }

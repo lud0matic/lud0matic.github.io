@@ -8,6 +8,8 @@
 
 <title>{{ page.title }} | {{site.name}}</title>
 
+
+
 {% seo %}
     
 <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
@@ -21,6 +23,10 @@
 <!-- RSS -->
 
 <link href="{{ site.baseurl }}/feed.xml" type="application/rss+xml" rel="alternate" title="Latest 10 blog posts" />
+
+<!-- Dark-Theme -->
+
+<script src="assets/js/switcher.js"></script>
 
 
 <!-- Custom favicon -->
@@ -86,21 +92,65 @@
 <!-- End Sidebar Navigation
 ================================================== -->
 
-
-
 <div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
 
-<div class="container">
-
+    <div class="container">      
+        
+        {% include theme-toggle.html %}
+        
+        
+   
+   
     <!-- Site Logo/Name
     ================================================== -->
    
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-        <img src="{{ site.baseurl }}/{{ site.logo }}" onmouseover="this.src='{{ site.baseurl }}/{{ site.logo_hover}}'" onmouseout="this.src='{{ site.baseurl }}/{{ site.logo}}'" alt="{{ site.name }}">
-    </a>  
-   
+    <a class="navbar-brand" href="{{ site.baseurl }}/">  
+        
+        <!--Logo using SVG File -->
+        <!-- <div class="container-dark">
+            <img src="{{ site.baseurl }}/{{ site.logo }}" class="dark-mode-logo" id="logo">
+            <img src="{{ site.baseurl }}/{{ site.logo_hover }}" class="dark-mode-logo" id="logo_hover">
+        </div> -->
+        <!-- Logo using SVG File -->
 
-    <!-- Site Tag
+        
+        <!-- Logo using SVG. Paste here your SVG Code -->
+        <div class="container-dark">        
+            <?xml version="1.0" standalone="no"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="283" viewBox="0 0 1808 512" preserveAspectRatio="xMidYMid meet">
+            <g class="logo_hover" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+            <path d="M0 4390 l0 -260 755 0 755 0 0 260 0 260 -755 0 -755 0 0 -260z"/>
+            <path d="M16570 4390 l0 -260 755 0 755 0 0 260 0 260 -755 0 -755 0 0 -260z"/>
+            <path d="M6437 4508 c-187 -258 -318 -475 -401 -670 -182 -420 -268 -875 -253 -1328 23 -666 236 -1259 662 -1839 45 -62 71 -89 79 -83 6 5 125 88 263 186 139 98 255 182 259 187 3 6 -11 34 -31 62 -296 414 -426 705 -496 1112 -27 151 -38 566 -20 736 50 472 187 830 472 1229 41 58 78 110 82 116 4 8 -71 66 -206 160 -116 82 -240 168 -274 191 l-61 43 -75 -102z"/>
+            <path d="M11285 4419 c-148 -104 -269 -193 -268 -198 1 -5 40 -63 86 -128 201 -283 311 -507 391 -798 68 -246 90 -453 83 -788 -5 -279 -18 -382 -73 -595 -74 -290 -183 -513 -406 -830 -78 -111 -80 -114 -62 -131 25 -23 526 -373 529 -369 375 497 598 995 684 1524 108 665 -10 1388 -319 1944 -92 166 -353 560 -370 559 -3 0 -126 -86 -275 -190z"/>
+            <path d="M1820 4531 c0 -7 1310 -3568 1406 -3823 l26 -68 354 0 c241 0 354 3 354 11 0 5 -323 883 -717 1950 l-716 1939 -354 0 c-200 0 -353 -4 -353 -9z"/>
+            <path d="M14821 2609 c-392 -1062 -716 -1939 -718 -1950 -5 -19 3 -19 352 -17 l357 3 709 1925 c390 1059 712 1935 715 1948 l6 22 -354 0 -354 0 -713 -1931z"/>	
+            <path d="M4210 730 l0 -260 755 0 755 0 0 260 0 260 -755 0 -755 0 0 -260z"/>
+            <path d="M12320 730 l0 -260 755 0 755 0 0 260 0 260 -755 0 -755 0 0 -260z"/>            
+            </g>
+            <g class="logo" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+            <path d="M8657 4415 c-170 -46 -311 -85 -313 -88 -2 -2 32 -83 76 -181 134 -297 273 -695 336 -960 10 -43 23 -80 29 -82 7 -3 587 170 672 201 22 7 -128 466 -243 741 -90 218 -212 454 -233 453 -9 0 -155 -38 -324 -84z"/>
+            <path d="M10030 4360 c0 -89 -20 -240 -56 -420 -142 -717 -384 -1178 -834 -1587 -287 -262 -587 -448 -962 -597 -82 -33 -148 -60 -148 -62 0 -2 21 -23 47 -46 137 -126 288 -321 389 -503 26 -47 52 -85 57 -85 14 0 237 118 392 208 999 576 1529 1354 1796 2637 23 110 50 227 60 260 10 33 15 63 11 66 -6 5 -729 179 -746 179 -3 0 -6 -23 -6 -50z"/>
+            <path d="M7589 4228 l-326 -90 60 -127 c123 -261 233 -565 321 -899 25 -92 48 -184 52 -205 3 -20 9 -39 13 -41 6 -4 679 199 687 207 12 11 -152 519 -235 730 -53 133 -235 519 -243 516 -2 -1 -150 -42 -329 -91z"/>
+            </g>
+            </svg>     
+        </div>
+        <!-- Logo using SVG -->
+        
+        
+        <!-- Logo using _config.yml path         -->
+        <!-- <div class="container-dark">
+            <img src="{{ site.baseurl }}/{{ site.logo }}" onmouseover="this.src='{{ site.baseurl }}/{{ site.logo_hover}}'" onmouseout="this.src='{{ site.baseurl }}/{{ site.logo}}'" class="dark-mode-logo" alt="{{ site.name }}">
+        </div> -->
+        <!-- Logo using _config.yml path -->
+
+        
+
+    </a>     
+     
+ 
+        <!-- Site Tag
     ================================================== -->
     {% if page.url == '/' %}
         <p class="sitetag">
@@ -112,21 +162,7 @@
     ================================================== -->
     <div class="main-content">
         {{ content }}
-    </div>
-
-    {% if site.mailchimp-list %}
-    <!-- Newsletter
-    ================================================== -->
-    <div class="newsletter text-center">
-        <span class="h4"><img src="{{ site.baseurl }}/{{ site.logo }}" class="newsletter-logo" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
-        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
-            <div class="mc-field-group d-inline-flex">
-            <input type="email" placeholder="Your e-mail" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-            <input type="submit" value="Subscribe" name="subscribe" class="heart">
-            </div>
-        </form>
-    </div>
-    {% endif %}
+    </div>    
     
 </div>
 
@@ -140,11 +176,13 @@
             </div>
             
             <div class="col-md-4 col-sm-12 text-center ">                
-                {% if site.socials.personal_web %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.personal_web }}"<i class="fas fa-link"></i></a> &nbsp;{% endif %}
-                {% if site.socials.mastodon %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.mastodon }}"<i class="fab fa-mastodon"></i></a> &nbsp;{% endif %}
-                {% if site.socials.instagram %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.instagram }}"<i class="fab fa-instagram"></i></a> &nbsp;{% endif %}
-                {% if site.socials.twitter %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.twitter }}"<i class="fab fa-twitter"></i></a> &nbsp;{% endif %}
-                {% if site.socials.github %}<a target="_blank" style="color: #2D3047" href="{{ site.socials.github }}"<i class="fa-brands fa-github-alt"></i></a> &nbsp;{% endif %}
+                <div class="footer-color">
+                {% if site.socials.personal_web %}<a target="_blank" href="{{ site.socials.personal_web }}"<i class="fas fa-link"></i></a> &nbsp;{% endif %}
+                {% if site.socials.mastodon %}<a target="_blank" href="{{ site.socials.mastodon }}"<i class="fab fa-mastodon"></i></a> &nbsp;{% endif %}
+                {% if site.socials.instagram %}<a target="_blank" href="{{ site.socials.instagram }}"<i class="fab fa-instagram"></i></a> &nbsp;{% endif %}
+                {% if site.socials.twitter %}<a target="_blank" href="{{ site.socials.twitter }}"<i class="fab fa-twitter"></i></a> &nbsp;{% endif %}
+                {% if site.socials.github %}<a target="_blank" href="{{ site.socials.github }}"<i class="fa-brands fa-github-alt"></i></a> &nbsp;{% endif %}
+                </div>
             </div>
             
             <div class="col-md-4 col-sm-12 text-center text-lg-right">    

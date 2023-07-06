@@ -598,6 +598,7 @@ img, img:hover {
         padding:2px;
     }
 }
+
 .article-post {    
     font-size:18px;
     p {
@@ -606,7 +607,8 @@ img, img:hover {
     }
     code {
         font-size: 15px;
-        color: var(--background-color);
+        background: var(--background-bar-footer);
+        color: var(--text-color);
     }
     code[class*="language-"], pre[class*="language-"] {
         font-size:15px;

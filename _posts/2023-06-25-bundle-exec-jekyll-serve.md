@@ -3,7 +3,7 @@ layout: post
 title:  "Bundle Exec Jekyll Serve"
 date:   2023-05-06 01:21:53 -0300
 permalink: /Bundle-Exec-Jekyll-Serve
-image: assets/images/2023/5/bundler_exec_cover.png
+image: assets/images/2023-06-25-bundle-exec-jekyll-serve/bundler_exec_cover.png
 categories: [Dev]
 comments: False
 ---
@@ -36,4 +36,4 @@ En fin...otra noche aprendiendo a hacer algo que no tenía idea de como se hací
 
 Ahora a recordar esa clase de git que hice en plena pandemia para subir todo esto...
 
-~~Termina usando GitHub Desktop~~
+~~Termina usando GitHub Desktop~~  <i class="fa-solid fa-clover"></i>

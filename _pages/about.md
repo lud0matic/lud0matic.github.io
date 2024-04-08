@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about
 comments: false
-image: assets/images/me.png
+image: assets/images/DSC_2657.png
 imageshadow: false
 ---
 Mi hombre es Gastón. Actualmente trabajo como fotógrafo en Presidencia de la Nación pero trabajé durante 12 años como administrador de bases de datos para varias empresas de Argentina y Conosur.

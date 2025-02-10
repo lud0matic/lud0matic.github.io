@@ -5,9 +5,6 @@ _site
 *~
 .jekyll-cache
 .vscode
-
-
-
 _site/
 .sass-cache/
 .jekyll-cache/
